@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PLAIO — connect & capture</title>
+<title>PLAIO - connect & capture</title>
 <style>
   :root{--o:#F5A623;--amber:#FFBE44;--black:#1E1E1E;--slate:#9A9DB5;--line:#33333a;--field:#262629;}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -80,7 +80,7 @@
       <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="name@company.com">
     </div>
     <div class="field">
-      <label for="notes">Notes (private — only sent to you)</label>
+      <label for="notes">Notes (private - only sent to you)</label>
       <textarea id="notes" placeholder="Where we met, what they're interested in…"></textarea>
     </div>
 
@@ -96,7 +96,7 @@
     </div>
     <div class="status" id="status"></div>
 
-    <div class="hint">Fill it in, then tap a button — your mail app opens pre-written, just hit send.</div>
+    <div class="hint">Fill it in, then tap a button - your mail app opens pre-written, just hit send.</div>
     <button class="clear" id="clear">Clear for next person</button>
 
     <div class="footer">Growth<span class="dot">·</span>Simplicity<span class="dot">·</span>Ambition</div>
@@ -115,25 +115,25 @@
       var n = name.value.trim(), e = email.value.trim();
       if(!e){ show("Add their email first ↑", "warn"); email.focus(); return; }
       var greet = n ? ("Hi " + n + ",") : "Hi there,";
-      var subject = "Great connecting at BIO — Gunnar / PLAIO";
+      var subject = "Great connecting at BIO - Gunnar / PLAIO";
       var body = greet + "\n\n"
-        + "Great connecting at BIO — looking forward to reaching back out once the event wraps up.\n\n"
-        + "PLAIO digitalises pharma planning — we connect demand, supply, and production into one platform, so your teams plan from a single source of truth instead of scattered spreadsheets. That means faster decisions, fewer surprises, and a plan everyone can actually trust.\n\n"
+        + "Great connecting at BIO - looking forward to reaching back out once the event wraps up.\n\n"
+        + "PLAIO digitalises pharma planning - we connect demand, supply, and production into one platform, so your teams plan from a single source of truth instead of scattered spreadsheets. That means faster decisions, fewer surprises, and a plan everyone can actually trust.\n\n"
         + "Talk soon,\n"
         + "Gunnar\n"
         + "Business Development Manager · PLAIO";
-      show("Opening your mail app — sends to them ✓", "ok");
+      show("Opening your mail app - sends to them ✓", "ok");
       window.location.href = "mailto:" + e + "?subject=" + enc(subject) + "&body=" + enc(body);
     });
 
     document.getElementById("toMe").addEventListener("click", function(){
       var n = name.value.trim(), e = email.value.trim(), nt = notes.value.trim();
-      var subject = "New lead" + (n ? " — " + n : (e ? " — " + e : ""));
+      var subject = "New lead" + (n ? " - " + n : (e ? " - " + e : ""));
       var body = "Name: " + (n || "(not given)") + "\n"
         + "Email: " + (e || "(not given)") + "\n\n"
         + "Notes:\n" + (nt || "(none)") + "\n\n"
-        + "— captured from my PLAIO card";
-      show("Opening your mail app — saves to your inbox ✓", "ok");
+        + "- captured from my PLAIO card";
+      show("Opening your mail app - saves to your inbox ✓", "ok");
       window.location.href = "mailto:gunnar@plaio.com?subject=" + enc(subject) + "&body=" + enc(body);
     });
 
