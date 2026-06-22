@@ -115,16 +115,13 @@
       var n = name.value.trim(), e = email.value.trim();
       if(!e){ show("Add their email first ↑", "warn"); email.focus(); return; }
       var greet = n ? ("Hi " + n + ",") : "Hi there,";
-      var subject = "Great to connect — Gunnar at PLAIO";
+      var subject = "Great connecting at BIO — Gunnar / PLAIO";
       var body = greet + "\n\n"
-        + "Great to meet you. As promised, here are my details — save them, or just hit reply anytime.\n\n"
-        + "Gunnar Steindorsson\n"
-        + "Business Development Manager · PLAIO\n"
-        + "Email: gunnar@plaio.com\n"
-        + "LinkedIn: https://www.linkedin.com/in/gunnar-steindórsson-142b068b/\n"
-        + "Web: plaio.com\n\n"
-        + "PLAIO is digitalised pharma planning — when you're ready, I'd love to show you what we're building.\n\n"
-        + "Talk soon,\nGunnar";
+        + "Great connecting at BIO — looking forward to reaching back out once the event wraps up.\n\n"
+        + "PLAIO digitalises pharma planning — we connect demand, supply, and production into one platform, so your teams plan from a single source of truth instead of scattered spreadsheets. That means faster decisions, fewer surprises, and a plan everyone can actually trust.\n\n"
+        + "Talk soon,\n"
+        + "Gunnar\n"
+        + "Business Development Manager · PLAIO";
       show("Opening your mail app — sends to them ✓", "ok");
       window.location.href = "mailto:" + e + "?subject=" + enc(subject) + "&body=" + enc(body);
     });
